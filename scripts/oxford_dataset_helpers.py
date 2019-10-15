@@ -29,7 +29,6 @@ def move_images_into_labelled_directories(image_dir):
     extract_breed_from_filename = re.compile(r'([^/]+)_\d+.jpg$')
 
     for filename in os.listdir('images'):
-        print(filename)
         match = extract_breed_from_filename.match(filename)
         if match is not None:
             breed = match.group(1)
@@ -38,4 +37,3 @@ def move_images_into_labelled_directories(image_dir):
             src_path = images_path / filename
             dest_path = images_path / breed / filename
             shutil.move(src_path, dest_path)
-            

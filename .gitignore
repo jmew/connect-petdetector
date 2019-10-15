@@ -3,3 +3,6 @@ demo.py
 temp.jpg
 __pycache__
 .vscode
+bottleneck/
+images/
+images.tar.gz

@@ -18,4 +18,5 @@ rt.train(architecture='mobilenet_0.50_224',
          bottleneck_dir=bottleneck_dir,
          model_dir=model_dir,
          learning_rate=args.learning_rate,
+         training_steps=2000,
          use_hyperdrive=True)

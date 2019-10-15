@@ -2,8 +2,6 @@
 from pathlib import Path
 from PIL import Image
 import matplotlib.pyplot as plt
-#import matplotlib.style as style
-
 
 def get_sample_images_for_each_species(dirname):
     d = Path(dirname)
@@ -24,12 +22,11 @@ def plot_images_in_grid(images_data, number_columns):
 
     row = 0
     col = 0
-
     for record in images_data:
         subplot = subplots[row, col]
         subplot.imshow(record[0])
         subplot.set_axis_off()
-        subplot.set_title(record[1], color='#358CD6')
+        subplot.set_title(record[1], color='#008000')
         col += 1
         if col == number_columns:
             row += 1

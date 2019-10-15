@@ -2,17 +2,17 @@
 class AMLConfig:
     pass
 
-AMLConfig.workspace_name           = 'Connect'
-AMLConfig.experiment_name          = 'ConnectExperiment'
-AMLConfig.resource_group           = 'juliademo'
-AMLConfig.compute_name             = 'nc6cluster'
+AMLConfig.workspace_name           = 'jemew-workspace'
+AMLConfig.experiment_name          = 'jemew-experiment'
+AMLConfig.resource_group           = 'jemew-rg'
+AMLConfig.compute_name             = 'jemew-compute'
 AMLConfig.training_script_filename = 'train.py'
 AMLConfig.scoring_script_filename  = 'score.py'
-AMLConfig.subscription_id          = '15ae9cb6-95c1-483d-a0e3-b1a1a3b06324'
-AMLConfig.storage_account_name     = 'connectstoragephbotvhz'
-AMLConfig.storage_account_key      = '7lf2UqasSb7MAi0n3Hf34VBeYr1IJ/EEUOE4r7MWK41tVmaq8cfjIXgJVX+A41y/bV5QyNFpYrYhkzK8JPOpNA=='
-AMLConfig.datastore_name           = 'default'
-AMLConfig.container_name           = 'default'
+AMLConfig.subscription_id          = 'b856ff87-00d1-4205-af56-3af5435ae401'
+AMLConfig.storage_account_name     = 'jemewworkspace3800130279'
+AMLConfig.storage_account_key      = '8K97f/sJUO6bgjmjkn4m4efOVt4/hiWsXfkdyysmuUKeKH0p1dV2I2V418Oo9BpKAiAgczw1xUvs+cL6LBsaxQ=='
+AMLConfig.datastore_name           = 'jemew-datastore'
+AMLConfig.container_name           = 'jemew-container'
 AMLConfig.images_dir               = 'images'
 
 AML = AMLConfig()
