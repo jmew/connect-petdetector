@@ -1,0 +1,21 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 0 issues that require attention
+--------------------------------------------------------------------------------
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'score.py'
+ outputting to 'score_new.py'
+--------------------------------------------------------------------------------
+
+14:16: INFO: Renamed 'tf.GraphDef' to 'tf.compat.v1.GraphDef'
+25:27: INFO: Renamed 'tf.gfile.GFile' to 'tf.io.gfile.GFile'
+48:14: INFO: Changed tf.image.resize_bilinear call to tf.image.resize(..., method=tf.image.ResizeMethod.BILINEAR).
+51:11: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+54:9: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+--------------------------------------------------------------------------------
+

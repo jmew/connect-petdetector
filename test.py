@@ -1,4 +1,3 @@
-import score
 import shutil
 from urllib.request import urlopen
 from IPython.display import Image, HTML, display
@@ -6,9 +5,10 @@ import requests
 import json
 import numpy as np
 from base64 import b64encode
+from scripts.print_predictions import parse_results
 
-image_uri = 'https://dm2301files.storage.live.com/y4m6wHcpjt7I-MnRZfL_bgxcr15ESNq_w0i3I6UTJ60hfk-BqL38oMVm1CsM2M09JkvG5zJYTC1onV3Dlrjuz2dbBGgtCObcjM0d8J08EfTAXGHYzWNzHYcYkFJWE5jiDKxRnS7XjhIULL9NkrXH5P4rqeNFWrmyDu8ZGSuTJ3wdpgT-hGEG_63A1BjGzJY2yY4uz2VZbf8pDQLlOY3C7RwOA/coco_dog.jpg?psid=1&width=1024&height=1024&cropMode=center'
-service_uri = 'http://23.96.116.25:80/score'
+image_uri = "https://images.dog.ceo/breeds/beagle/n02088364_12154.jpg"
+service_uri = 'http://52.180.90.254/score'
 
 with urlopen(image_uri) as response:
     with open('temp.jpg', 'bw+') as f:
@@ -29,8 +29,4 @@ resp = requests.post(service_uri, input_data, headers=headers)
 
 # Extract predication results from the HTTP response
 result = resp.text.strip("}\"").split("[")
-predications = result[1].split(",")
-print ("Predication results:")
-for temp in predications:
-    print (temp.strip("]").replace('\\','').strip().strip("\"").strip("}"))
-Image('temp.jpg')
+parse_results(result)
